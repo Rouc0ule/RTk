@@ -1,10 +1,17 @@
+import customtkinter as ctk
 import tkinter as tk
-from gtk_canvas import GTkCanvas
 
-root = tk.Tk()
+root = ctk.CTk()
 
-canvas = GTkCanvas(root, bg='red')
+canvas = ctk.CTkCanvas(root, height=20, width=20)
 canvas.pack()
-canvas.roundedRectangle(5, 5, 200, 100, fill='lightblue')
+canvas.create_aa_circle(10, 10, 5, fill='blue')
+
+tkcanvas = tk.Canvas(root, height=20, width=20)
+tkcanvas.pack()
+tkcanvas.create_oval(10, 10, 20, 20, fill='blue')
+
+button = ctk.CTkButton(root)
+button.pack()
 
 root.mainloop()
