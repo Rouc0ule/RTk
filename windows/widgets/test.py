@@ -1,9 +1,13 @@
-from gtk_canvas import *
+import tkinter as tk
+from gtk_button import RTkButton
+
+def clicked():
+    print('Clicked !')
 
 root = tk.Tk()
+root.configure(bg='black')
 
-canvas = GTkCanvas(root, width=150, height=100)
-canvas.pack()
-canvas.roundedRectangle(0, 0, 150, 100)
+button = RTkButton(root, click_effect=None, command=clicked)
+button.place(relx=0.5, rely=0.5, anchor='center')
 
 root.mainloop()
