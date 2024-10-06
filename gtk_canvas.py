@@ -28,8 +28,7 @@ class GTkCanvas(tk.Canvas):
                 x, y+r,
                 x, y]
         self.create_polygon(points, **kwargs, smooth=True)
-        self.create_oval(-5, -5, 5, 5, fill='black')
-
+        
     @classmethod
     def init_font_character_mapping(cls):
         """ optimizations made for Windows 10, 11 only """
